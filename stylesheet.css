@@ -3,6 +3,7 @@
     --secondary-color: #abd699; /* Light Lime */
     --tertiary-color: #ffe26a; /* Fresh Lemon */
     --quaternary-color: #75c9b7; /* Teal */
+    --highlight-color: #4cd3a2; /* Bright Teal */
     --light-color: #c7ddcc; /* Mint */
     --hover-color: #ffe26a; /* Fresh Lemon */
     --white-color: #fff;
@@ -20,6 +21,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+h1 {
+    font-family: 'Prompt', sans-serif;
 }
 
 .menu {
@@ -95,7 +100,38 @@ body {
     color: var(--white-color);
 }
 
+.content-box h2 a {
+    margin: 40px 0 20px;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.content-box h2 a:hover {
+    margin: 40px 0 20px;
+    color: var(--tertiary-color);
+    text-decoration: none;
+}
+
 .content-box p {
     font-size: 1.1em;
     line-height: 1.6em;
+}
+
+.highlight-container, .highlight {
+    position: relative;
+}
+  
+strong {
+    position: relative;
+}
+strong::before {
+    background-color: var(--highlight-color);
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    top: 10px;
+    z-index: -1;
+    transform: rotate(-2deg);
 }
