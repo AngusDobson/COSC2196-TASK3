@@ -79,13 +79,80 @@ h1 {
     line-height: 1.6em;
 }
 
-.content-box {
+.highlight .flex-container,
+.highlight-alt .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.highlight .flex-container a,
+.highlight-alt .flex-container a {
+    text-decoration: none;
+    width: 48%;
+}
+
+.highlight-alt .flex-container a {
+    width: 48%;
+}
+
+.content-box .flex-h2 {
+    color: var(--primary-color);
+}
+
+.highlight-alt .flex-h2 {
+    color: var(--hover-color);
+}
+
+.flex-item {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border-radius: 15px;
+    padding: 10px;
+    padding-top: 1px;
+    padding-left: 20px;
+    height: 150px;
+}
+
+.highlight-alt .flex-item{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    margin-bottom: 20px;
+    height: 175px;
+}
+
+.flex-item:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.highlight-alt .flex-item:hover {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+}
+
+.flex-item:hover .flex-h2 {
+    color: var(--hover-color);
+}
+
+.highlight-alt .flex-item:hover .flex-h2 {
+    color: var(--primary-color);
+}
+
+.content-box,
+.highlight-alt {
     background-color: rgba(255, 255, 255, 0.1); 
     border-radius: 15px;
     padding: 20px;
     padding-left: 50px;
+    padding-right: 50px;
     margin: 20px 0;
     text-align: left;
+}
+
+.content-box img {
+    width: 50%;
+    margin-left: 25%;
 }
 
 .content-box h1 {
